@@ -2,12 +2,22 @@ import React from 'react';
 import gradasi from '../img/gradasi.svg';
 import people from '../img/people.svg';
 import {BiLockAlt, BiUser} from 'react-icons/bi';
+import logo from '../img/logo.png';
+
+
 export default function Login(){
     return(
         <>
             <div>
-                <img class="z-0 relative left-36" src={people} alt={people}></img>
-                <img src={gradasi} alt={gradasi} class="z-1 absolute bottom-0"></img>
+            <div className="flex flex-row items-center top-6 left-24 absolute">
+                <img src={logo} alt="logo" className="w-18 h-14 pr-3"></img>
+                        <div className="text-left">
+                            <div className="text-lg text-blue-600 font-semibold">Inventaris</div>
+                            <div className="text-[0.7rem] text-gray-400">SMK Wikrama bogor</div>
+                        </div>
+            </div>
+                <img class="z-0 relative left-36 top-32 w-[400px] h-[400px]" src={people} alt={people}></img>
+                <img src={gradasi} alt={gradasi} class="z-1 absolute w-1/2 h-1/2 bottom-0"></img>
             </div>
             <div class="absolute right-60 top-32">
                     <p class="text-[#107BDE] leading-12 text-3xl font-semibold text-left mb-1">Selamat Datang!</p>

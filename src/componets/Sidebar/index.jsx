@@ -2,7 +2,6 @@ import logo from "../../img/logo.png";
 import {NavLink, Link} from "react-router-dom";
 import { useState } from "react";
 import { BiCategory , BiTime , BiBook , BiUserPlus, BiChevronDown, BiChevronUp} from 'react-icons/bi'; 
-import Swal from "sweetalert2";
 
 
 export default function Sidebar () {
@@ -34,7 +33,7 @@ export default function Sidebar () {
     ];
     return (
         <div className="h-fullscreen border-r border-gray-50 px-8 bg-gray-100 mr-12 transition-all ">
-            <Link to="/" className="flex flex-row pt-8 pb-28 items-center">
+            <Link to="/Dashboard" className="flex flex-row pt-8 pb-28 items-center">
                     <img src={logo} alt="logo" className="w-18 h-14 pr-3"></img>
                         <div className="text-left">
                             <div className="text-lg text-blue-600 font-semibold">Inventaris</div>
@@ -42,7 +41,7 @@ export default function Sidebar () {
                         </div>
             </Link>
             <ul className="text-left pb-28 text-gray-500 ml-2">
-                    <NavLink to="/" className={({isActive}) => {
+                    <NavLink to="/Dashboard" className={({isActive}) => {
                       return(  
                         (!isActive
                             ? "pb-6 flex flex-row items-center hover:text-blue-400"
@@ -52,15 +51,7 @@ export default function Sidebar () {
                     }}><BiCategory className="text-lg mr-2"/>Dashboard</NavLink>
                     {History.map((History) => (
                         <div className="pb-6">
-                          <NavLink className={({isActive}) => {
-                            return(
-                              (!isActive
-                                ? "flex flex-row items-center hover:text-blue-400"
-                                : "flex flex-row"
-                                )
-                            );
-                          }} 
-                        onClick={() => setSubmenuHistoryOpen(!SubmenuHistoryOpen)}>
+                          <NavLink className="flex flex-row items-center hover:text-blue-400" onClick={() => setSubmenuHistoryOpen(!SubmenuHistoryOpen)}>
                             <span className="text-lg mr-1.5">{History.icon}</span>
                             <span>{History.title}</span>
                             {History.submenu && !SubmenuHistoryOpen ? (

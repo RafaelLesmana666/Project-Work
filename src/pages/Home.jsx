@@ -1,6 +1,6 @@
 import Sidebar from '../componets/Sidebar/index';
 import DashboardHeader from '../componets/Header/Dashboard';
-import Dashboard from '../content/dashboard';
+import Dashboard from '../content/Dashboard/dashboard';
 import React, { Component } from 'react';
 
 

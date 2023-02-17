@@ -51,7 +51,7 @@ const Header = (props) => {
                                         return(
                                             (!logOUt 
                                              ? Swal.fire ({ 
-                                                title: 'Keluar?',
+                                                title: 'Keluar ?',
                                                 type: 'warning',
                                                 icon: 'info',
                                                 showCancelButton: true,
@@ -59,6 +59,7 @@ const Header = (props) => {
                                                 confirmButtonText: 'Ya',
                                                 cancelButtonColor: 'red',
                                                 cancelButtonText: 'Batal'
+                                                
                                             })
                                              : '')
                                         )

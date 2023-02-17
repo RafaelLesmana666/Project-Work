@@ -1,6 +1,6 @@
 import React from 'react';
-import Swal from 'sweetalert2';
 import {BiShare, BiTime, BiWrench,} from 'react-icons/bi';
+import { Chart } from './chart';
 
 export default function Dashboard () {
     return (
@@ -23,8 +23,8 @@ export default function Dashboard () {
                 </div>
                 <div class="w-60 h-36 bg-gray-100 rounded-xl">
                     <div class="flex flex-row pl-5 pt-5">
-                        <div class="bg-blue-500 w-11 h-10 rounded">
-                            <div class="text-white text-2xl pl-2 pt-2"><BiTime/></div>
+                        <div class="bg-blue-500 w-11 h-10  items-center rounded">
+                            <div class="text-white text-2xl pt-2 pl-2"><BiTime/></div>
                         </div>
                         <div className="text-left pt-1.5 pl-3">
                                 <div className="text-[0.7rem] text-gray-400">Hari ini</div>
@@ -101,7 +101,9 @@ export default function Dashboard () {
                                 <div className="text-[0.7rem] text-gray-400">Saat ini</div>
                                 <div className="text-sm">Kategori Barang Pinjaman</div>
                             </div>
-                            <div class='p-[74px] bg-blue-300 rounded-full absolute mt-4 ml-16'></div>
+                            <div className='w-40 h-40 ml-14 mt-2'>
+                            <Chart/>
+                            </div>
                         </div>
                </div>
         </div>
